@@ -14,8 +14,6 @@ Here are some of the technologies used in this repository:
 
 ![C++ Logo](images/cpp_logo.png) ![GCC Logo](images/gcc_logo.png) ![Code::Blocks Logo](images/codeblocks_logo.png)
 
-(Replace `images/cpp_logo.png`, `images/gcc_logo.png`, and `images/codeblocks_logo.png` with the actual paths to your image files within your repository's `images` directory. If you do not have these images, you will need to add them. You can find many logos online, or use a site like shields.io to create badge like images.)
-
 ## Directory Structure
 
 * **Beginner/**: Contains projects suitable for beginners learning C++. Each project within this directory will have its own README file explaining its purpose, how to compile, and how to run it.
