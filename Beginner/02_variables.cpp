@@ -1,10 +1,11 @@
+// Beginner/02_varables.cpp
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
     int age = 30;
-    int double pi = 3.14159;
+    double pi = 3.14159;
     char initial = 'A';
     string name = "Alice Smith";
 
