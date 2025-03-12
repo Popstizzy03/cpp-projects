@@ -1,77 +1,75 @@
-// {Intermediate} inventory_system.cpp
+// Intermediate/InventorySystem/inventory_system.cpp
 #include <iostream>
 #include <vector>
 #include <string>
-#include <iomanip> // For formating output
-
-using namespace std;
+#include <iomanip> // For formatting output
 
 struct Item {
-    string name;
+    std::string name;
     int quantity;
     double price;
 };
 
-vector<item> inventory;
+std::vector<Item> inventory;
 
 void addItem() {
     Item newItem;
-    cout << "Enter item name: ";
-    getline(cin >> ws, newItem.name); // ws consumes leading whitespace
-    cout << "Enter quantity: ";
-    cin >> newItem.quantity;
-    cout << "Enter price: ";
-    cin newItem.price;
+    std::cout << "Enter item name: ";
+    std::getline(std::cin >> std::ws, newItem.name); // std::ws consumes leading whitespace
+    std::cout << "Enter quantity: ";
+    std::cin >> newItem.quantity;
+    std::cout << "Enter price: ";
+    std::cin >> newItem.price;
     inventory.push_back(newItem);
-    cout << "Item added successfully\n";
+    std::cout << "Item added successfully!\n";
 }
 
 void viewInventory() {
     if (inventory.empty()) {
-        cout << "Inventory is empty.\n";
+        std::cout << "Inventory is empty.\n";
         return;
     }
-    cout << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(10) << "Price" << endl;
+    std::cout << std::left << std::setw(20) << "Name" << std::setw(10) << "Quantity" << std::setw(10) << "Price" << std::endl;
     for (const auto& item : inventory) {
-        cout << left << setw(20) << item.name << setw(10) << item.quantity << setw(10) << item.price << endl;
-    } 
+        std::cout << std::left << std::setw(20) << item.name << std::setw(10) << item.quantity << std::setw(10) << item.price << std::endl;
+    }
 }
 
 void updateItem() {
-    string itemName;
-    cout << "Enter item name to update: ";
-    getline(cin >> ws, itemName);
+    std::string itemName;
+    std::cout << "Enter item name to update: ";
+    std::getline(std::cin >> std::ws, itemName);
 
     for (auto& item : inventory) {
         if (item.name == itemName) {
-            cout << "Enter new quantity: ";
-            cin >> item.quantity;
-            cout << "Enter new price: ";
-            cin >> item.price;
-            cout << "Item updated successfully!\n";
+            std::cout << "Enter new quantity: ";
+            std::cin >> item.quantity;
+            std::cout << "Enter new price: ";
+            std::cin >> item.price;
+            std::cout << "Item updated successfully!\n";
             return;
         }
     }
-    cout << "Item not found.\n";
+    std::cout << "Item not found.\n";
 }
 
 int main() {
     int choice;
     do {
-        cout << "\nInventory Management System\n";
-        cout << "1. Add Item\n";
-        cout << "2. View Inventory\n";
-        cout << "3. Update Item\n";
-        cout << "4. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+        std::cout << "\nInventory Management System\n";
+        std::cout << "1. Add Item\n";
+        std::cout << "2. View Inventory\n";
+        std::cout << "3. Update Item\n";
+        std::cout << "4. Exit\n";
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
 
         switch (choice) {
             case 1: addItem(); break;
             case 2: viewInventory(); break;
             case 3: updateItem(); break;
-            case 4: cout << "Exiting...\n"; break;
-            default: cout << "Invalid choice.\n";
+            case 4: std::cout << "Exiting...\n"; break;
+            default: std::cout << "Invalid choice.\n";
         }
     } while (choice != 4);
     return 0;
