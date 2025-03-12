@@ -36,3 +36,21 @@ void viewInventory() {
         cout << left << setw(20) << item.name << setw(10) << item.quantity << setw(10) << item.price << endl;
     } 
 }
+
+void updateItem() {
+    string itemName;
+    cout << "Enter item name to update: ";
+    getline(cin >> ws, itemName);
+
+    for (auto& item : inventory) {
+        if (item.name == itemName) {
+            cout << "Enter new quantity: ";
+            cin >> item.quantity;
+            cout << "Enter new price: ";
+            cin >> item.price;
+            cout << "Item updated successfully!\n";
+            return;
+        }
+    }
+    cout << "Item not found.\n";
+}
