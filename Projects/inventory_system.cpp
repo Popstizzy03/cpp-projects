@@ -25,3 +25,14 @@ void addItem() {
     inventory.push_back(newItem);
     cout << "Item added successfully\n";
 }
+
+void viewInventory() {
+    if (inventory.empty()) {
+        cout << "Inventory is empty.\n";
+        return;
+    }
+    cout << left << setw(20) << "Name" << setw(10) << "Quantity" << setw(10) << "Price" << endl;
+    for (const auto& item : inventory) {
+        cout << left << setw(20) << item.name << setw(10) << item.quantity << setw(10) << item.price << endl;
+    } 
+}
