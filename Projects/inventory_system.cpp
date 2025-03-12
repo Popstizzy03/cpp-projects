@@ -54,3 +54,25 @@ void updateItem() {
     }
     cout << "Item not found.\n";
 }
+
+int main() {
+    int choice;
+    do {
+        cout << "\nInventory Management System\n";
+        cout << "1. Add Item\n";
+        cout << "2. View Inventory\n";
+        cout << "3. Update Item\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: addItem(); break;
+            case 2: viewInventory(); break;
+            case 3: updateItem(); break;
+            case 4: cout << "Exiting...\n"; break;
+            default: cout << "Invalid choice.\n";
+        }
+    } while (choice != 4);
+    return 0;
+}
