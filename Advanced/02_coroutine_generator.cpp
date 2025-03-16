@@ -11,5 +11,9 @@ struct Generator {
             current_value = value;
             return {};
         }
-    }
+        suspend_always initial_suspend() { return {}; }
+        suspend_always final_suspend() noexcept { return {}; }
+        Generator get_return_object() { return Generator{coroutine_handle<promise_type>::from_promise(*this)}; }
+        void unhandled_exception() {}
+    };
 }
