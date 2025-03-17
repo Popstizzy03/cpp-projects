@@ -22,3 +22,18 @@ struct Generator {
     int value() { return handle.promise().current_value; }
     bool next() { return handle.resume(), !handle.done(); }
 };
+
+Generator generateNumbers(int count) {
+    for (int i =0; i < count; ++i) {
+        co_yield i;
+    }
+}
+
+int main() {
+    auto generator = generateNumbers(5);
+    while (generator.next()) {
+        cout << generator.value() << " ";
+        cout << endl;
+        return 0;
+    }
+}
