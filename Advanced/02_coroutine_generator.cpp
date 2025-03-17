@@ -35,3 +35,5 @@ int main() {
     std::cout << std::endl;
     return 0;
 }
+
+// g++ -std=c++20 -fcoroutines 02_coroutine_generator.cpp -o hello
