@@ -16,4 +16,9 @@ struct Generator {
         Generator get_return_object() { return Generator{coroutine_handle<promise_type>::from_promise(*this)}; }
         void unhandled_exception() {}
     };
-}
+    coroutine_handle<promise_type> handle;
+    Generator(coroutine_handle<promise_type> h) : handle(h) {}
+    ~Generator() { if (handle) handle.destroy(); }
+    int value() { return handle.promise().current_value; }
+    bool next() { return handle.resume(), !handle.done(); }
+};
