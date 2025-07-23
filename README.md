@@ -1,12 +1,12 @@
 # C++ Projects Repository
 
-Welcome to the C++ Projects repository! This collection showcases a variety of projects developed using C++. Each project is designed to demonstrate different programming concepts, algorithms, and techniques, ranging from beginner-friendly exercises to more complex applications.
+Welcome to the C++ Projects repository! This collection showcases a comprehensive variety of projects developed using C++. Each project is designed to demonstrate different programming concepts, algorithms, and techniques, ranging from beginner-friendly exercises to advanced applications showcasing cutting-edge C++ features.
 
 This repository is organized by skill level to provide a clear progression path:
 
-* **Beginner:** Projects for those new to C++.
-* **Intermediate:** Projects for those with some experience in C++.
-* **Advanced:** Projects for advanced C++ programmers.
+* **Beginner:** 30 projects for those new to C++ (basic syntax, control structures, functions)
+* **Intermediate:** 30 projects for those with some experience in C++ (OOP, STL, data structures, concurrency)
+* **Advanced:** 10 projects for advanced C++ programmers (metaprogramming, concepts, advanced patterns)
 
 ## Tech Stack
 
@@ -16,9 +16,10 @@ Here are some of the technologies used in this repository:
 
 ## Directory Structure
 
-* **Beginner/**: Contains projects suitable for beginners learning C++. Each project within this directory will have its own README file explaining its purpose, how to compile, and how to run it.
-* **Intermediate/**: Contains projects that require a more solid understanding of C++ concepts. Each project will have its own README file with detailed instructions.
-* **Advanced/**: Contains projects that showcase advanced C++ techniques and algorithms. Each project will have its own README file providing in-depth explanations.
+* **Beginner/**: Contains 30 projects suitable for beginners learning C++. Covers basic syntax, variables, control structures, functions, arrays, and simple problem-solving.
+* **Intermediate/**: Contains 30 projects that require a solid understanding of C++ concepts. Covers OOP, STL containers, algorithms, file I/O, templates, concurrency, and design patterns.
+* **Advanced/**: Contains 10 projects that showcase cutting-edge C++ techniques. Covers template metaprogramming, concepts, SFINAE, advanced concurrency, memory management, and modern C++ features.
+* **Projects/**: Real-world application examples and larger projects that combine multiple concepts.
 
 ## Getting Started
 
