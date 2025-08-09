@@ -12,7 +12,7 @@ This repository is organized by skill level to provide a clear progression path:
 
 Here are some of the technologies used in this repository:
 
-<img src="images/c++_logo.png" alt="c++ Logo" width="200"/> <img src="images/gcc_logo.png" alt="GCC Logo" width="200"/> <img src="images/codeblocks.png" alt="CodeBlocks Logo" width="200"/>
+<img src="images/c++_logo.png" alt="c++ Logo" width="200"/> <img src="images/gcc_logo.png" alt="GCC Logo" width="200"/> <img src="images/codeblocks.png" alt="CodeBlocks Logo" width="220"/>
 
 ## Directory Structure
 
